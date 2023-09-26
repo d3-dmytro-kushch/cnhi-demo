@@ -1,0 +1,16 @@
+{
+  "name": "cnhi-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "transform-tokens": "npx token-transformer tokens/figma/tokens.json tokens/transformed/output.json",
+    "build-style-dictionary": "npx style-dictionary build -c tokens/style-dictionary/config.json",
+    "build-tokens": "npm run transform-tokens && npm run build-style-dictionary"
+  },
+  "dependencies": {
+    "token-transformer": "^0.0.33"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "style-dictionary": "^3.8.0"
+  }
+}
