@@ -1,6 +1,6 @@
 {
   "source": [
-    "tokens/transformed/light.json"
+    "tokens/transformed/core.json"
   ],
   "platforms": {
     "scss": {
@@ -8,11 +8,11 @@
       "buildPath": "web/",
       "files": [
         {
-          "destination": "react/styles/_light.scss",
+          "destination": "react/styles/_core.scss",
           "format": "scss/variables"
         },
         {
-          "destination": "angular/styles/_light.scss",
+          "destination": "angular/styles/_core.scss",
           "format": "scss/variables"
         }
       ]

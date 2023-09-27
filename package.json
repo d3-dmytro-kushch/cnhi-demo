@@ -2,8 +2,14 @@
   "name": "cnhi-demo",
   "version": "1.0.0",
   "scripts": {
-    "transform-tokens": "npx token-transformer tokens/figma/tokens.json tokens/transformed/output.json",
-    "build-style-dictionary": "npx style-dictionary build -c tokens/style-dictionary/config.json",
+    "transform-tokens-core": "npx token-transformer tokens/figma/tokens.json tokens/transformed/core.json core",
+    "transform-tokens-light": "npx token-transformer tokens/figma/tokens.json tokens/transformed/light.json core,light,theme core",
+    "transform-tokens-dark": "npx token-transformer tokens/figma/tokens.json tokens/transformed/dark.json core,dark,theme core",
+    "transform-tokens": "npm run transform-tokens-core && npm run transform-tokens-light && npm run transform-tokens-dark",
+    "build-style-core": "npx style-dictionary build -c tokens/style-dictionary/config-core.json",
+    "build-style-light": "npx style-dictionary build -c tokens/style-dictionary/config-light.json",
+    "build-style-dark": "npx style-dictionary build -c tokens/style-dictionary/config-dark.json",
+    "build-style-dictionary": "npm run build-style-core && npm run build-style-light && npm run build-style-dark",
     "build-tokens": "npm run transform-tokens && npm run build-style-dictionary"
   },
   "dependencies": {
