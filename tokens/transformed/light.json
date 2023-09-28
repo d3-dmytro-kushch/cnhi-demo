@@ -25,7 +25,7 @@
       "type": "borderRadius"
     },
     "background": {
-      "value": "#f7fafc",
+      "value": "#ffffff",
       "type": "color"
     },
     "padding": {
@@ -132,7 +132,7 @@
   },
   "bg": {
     "default": {
-      "value": "#f7fafc",
+      "value": "#ffffff",
       "type": "color"
     },
     "muted": {
